@@ -1,0 +1,20 @@
+<h2>Add Hero</h2>
+
+
+  <div class="heroForm">
+    <table>
+        <tr>
+            <td>Id:</td>
+            <input type="text" [(ngModel)]="id" placeholder="Id..." required>
+        </tr>
+
+        <tr>
+            <td>Name:</td>
+            <input type="text" [(ngModel)]="name" placeholder="Name..." required>
+        </tr>
+        <tr>
+            <button (click)="addHero()" >Add</button>
+        </tr>
+    </table>
+</div>
+

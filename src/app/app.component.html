@@ -1,7 +1,16 @@
- {{title}}
- <nav>
-    <a routerLink="/heroes">Heroes</a>
-    <a routerLink="/dashboard">dashboard</a>
- </nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+ <body>
+   <div class="home">
+      
+      <nav class="blue-toolbar">
+         <a routerLink="/heroes">Heroes</a>
+         <a routerLink="/dashboard">dashboard</a>
+         <a routerLink="/addHero">Add Hero</a>
+      </nav>
+      <h1>{{title}}</h1>
+      <router-outlet></router-outlet>
+      <app-messages></app-messages>
+   </div>
+ </body>
+ 
+ 
+ 

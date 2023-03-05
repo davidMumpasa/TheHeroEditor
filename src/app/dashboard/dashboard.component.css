@@ -3,6 +3,24 @@
 h2 {
     text-align: center;
   }
+
+  /* HeroDetailComponent's private CSS styles */
+
+button {
+  margin-top: 20px;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
   
   .heroes-menu {
     padding: 0;
@@ -48,3 +66,6 @@ h2 {
   a:hover {
     background-color: #000;
   }
+
+
+ 

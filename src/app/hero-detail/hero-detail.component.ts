@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import {Location} from '@angular/common'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-hero-detail',
@@ -11,7 +12,7 @@ import {Location} from '@angular/common'
 })
 export class HeroDetailComponent implements OnInit {
 
-  @Input() hero? : Hero;
+  @Input() hero! : Hero;
 
   constructor(private heroService: HeroService, private route: ActivatedRoute, private location: Location) {}
 
@@ -28,7 +29,32 @@ export class HeroDetailComponent implements OnInit {
   }
 
   save(): void{
-    if(this.hero)
-    this.heroService.updateHero(this.hero).subscribe();
+    
+    if(this.hero){
+      
+      this.heroService.updateHero(this.hero).subscribe();
+    }
+    
+  }
+
+  deleteHero(): void{
+    if(this.hero){
+      Swal.fire({
+        title: 'Are you sure you want to Delete This Hero??',
+        text: 'You want to delete this item?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, keep it'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.heroService.deleteHero(this.hero.id).subscribe();
+        } else if (result.isDenied) {
+          // User clicked the "No" button
+        }
+      });
+      
+    }
+   
   }
 }

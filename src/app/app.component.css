@@ -1,4 +1,5 @@
 /* AppComponent's private CSS styles */
+
 h1 {
     margin-bottom: 0;
   }
@@ -7,15 +8,42 @@ h1 {
     text-decoration: none;
     margin-top: 10px;
     display: inline-block;
-    background-color: #e8e8e8;
-    color: #3d3d3d;
+    background-color: #435960;
+    color: white;
     border-radius: 4px;
   }
   
   nav a:hover {
     color: white;
-    background-color: #42545C;
+    background-color: black;
   }
   nav a:active {
     background-color: black;
   }
+  h1 {
+    margin-top: 2%;
+    size: 20%;
+    color: #435960;
+    font-weight: bold;
+  }
+  .home{
+    margin-left: 3%;
+  }
+  body{
+    background-image: url('../assets/images/batman-3351414_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .blue-toolbar {
+    margin-left: -3%;
+    margin-top: 0%;
+    font-weight: bold;
+    background-color:#435960;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  
+  
